@@ -57,8 +57,117 @@
         </div>
       </div>
       <div class="hero__media">
-        <img src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?w=2400&q=80&auto=format&fit=crop"
-             alt="Drone i lufta mot en mørk bakgrunn" fetchpriority="high">
+        <!-- Teknisk tegning av prosjektdronen (toppvisning). Tallene i
+             tittelfeltet og merkelappene kan endres direkte her. -->
+        <svg class="bp" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img"
+             aria-label="Teknisk tegning av Aerobots prosjektdrone sett ovenfra, med mål og komponenter">
+          <defs>
+            <pattern id="bp-minor" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M40 0H0V40" fill="none" stroke="#8fa9c9" stroke-opacity=".07"/>
+            </pattern>
+            <pattern id="bp-major" width="200" height="200" patternUnits="userSpaceOnUse">
+              <rect width="200" height="200" fill="url(#bp-minor)"/>
+              <path d="M200 0H0V200" fill="none" stroke="#8fa9c9" stroke-opacity=".14"/>
+            </pattern>
+            <marker id="bp-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+              <path d="M0 1 9 5 0 9" fill="none" stroke="#8fa9c9" stroke-width="1.2"/>
+            </marker>
+          </defs>
+
+          <rect width="1600" height="900" fill="#060b13"/>
+          <rect width="1600" height="900" fill="url(#bp-major)"/>
+          <rect class="bp-thin d" x="24" y="24" width="1552" height="852" pathLength="1"/>
+
+          <!-- Senterlinjer -->
+          <path class="bp-center" d="M260 450H1340M800 20V880M470 120 1130 780M1130 120 470 780"/>
+
+          <!-- Propeller -->
+          <g class="bp-dash">
+            <circle cx="1100" cy="150" r="150"/><circle cx="1100" cy="750" r="150"/>
+            <circle cx="500" cy="750" r="150"/><circle cx="500" cy="150" r="150"/>
+          </g>
+          <g class="bp-prop" style="transform-origin:1100px 150px"><ellipse cx="1100" cy="150" rx="138" ry="10" transform="rotate(20 1100 150)"/></g>
+          <g class="bp-prop rev" style="transform-origin:1100px 750px"><ellipse cx="1100" cy="750" rx="138" ry="10" transform="rotate(-35 1100 750)"/></g>
+          <g class="bp-prop" style="transform-origin:500px 750px"><ellipse cx="500" cy="750" rx="138" ry="10" transform="rotate(60 500 750)"/></g>
+          <g class="bp-prop rev" style="transform-origin:500px 150px"><ellipse cx="500" cy="150" rx="138" ry="10" transform="rotate(-10 500 150)"/></g>
+
+          <!-- Armer -->
+          <g class="bp-line d-all" fill="#060b13">
+            <rect x="-15" y="95" width="30" height="292" rx="4" transform="translate(800 450) rotate(225)" pathLength="1"/>
+            <rect x="-15" y="95" width="30" height="292" rx="4" transform="translate(800 450) rotate(315)" pathLength="1"/>
+            <rect x="-15" y="95" width="30" height="292" rx="4" transform="translate(800 450) rotate(45)" pathLength="1"/>
+            <rect x="-15" y="95" width="30" height="292" rx="4" transform="translate(800 450) rotate(135)" pathLength="1"/>
+          </g>
+
+          <!-- Motorer -->
+          <g class="bp-line d-all" fill="#060b13">
+            <circle cx="1100" cy="150" r="38" pathLength="1"/><circle cx="1100" cy="750" r="38" pathLength="1"/>
+            <circle cx="500" cy="750" r="38" pathLength="1"/><circle cx="500" cy="150" r="38" pathLength="1"/>
+          </g>
+          <g class="bp-thin d-all">
+            <circle cx="1100" cy="150" r="24" pathLength="1"/><circle cx="1100" cy="750" r="24" pathLength="1"/>
+            <circle cx="500" cy="750" r="24" pathLength="1"/><circle cx="500" cy="150" r="24" pathLength="1"/>
+            <circle cx="1100" cy="150" r="7" pathLength="1"/><circle cx="1100" cy="750" r="7" pathLength="1"/>
+            <circle cx="500" cy="750" r="7" pathLength="1"/><circle cx="500" cy="150" r="7" pathLength="1"/>
+          </g>
+
+          <!-- Senterplate, batteri (skjult linje), flykontroller og GPS -->
+          <rect class="bp-line d" x="700" y="300" width="200" height="300" rx="28" fill="#060b13" pathLength="1"/>
+          <rect class="bp-dash" x="728" y="318" width="144" height="264" rx="8"/>
+          <g class="bp-thin d-all">
+            <circle cx="726" cy="326" r="6" pathLength="1"/><circle cx="874" cy="326" r="6" pathLength="1"/>
+            <circle cx="726" cy="574" r="6" pathLength="1"/><circle cx="874" cy="574" r="6" pathLength="1"/>
+          </g>
+          <rect class="bp-hi d" x="752" y="402" width="96" height="96" rx="6" pathLength="1"/>
+          <rect class="bp-thin d" x="784" y="434" width="32" height="32" rx="2" pathLength="1"/>
+          <path class="bp-hi" d="M800 410 791 424H809Z" fill="#c9d8ea"/>
+          <path class="bp-thin d" d="M800 300V264" pathLength="1"/>
+          <circle class="bp-line d" cx="800" cy="242" r="22" fill="#060b13" pathLength="1"/>
+          <circle class="bp-thin d" cx="800" cy="242" r="10" pathLength="1"/>
+
+          <!-- Mål -->
+          <path class="bp-thin" d="M500 104V40M1100 104V40"/>
+          <path class="bp-thin" d="M506 56H1094" marker-start="url(#bp-arrow)" marker-end="url(#bp-arrow)"/>
+          <text class="bp-txt" x="800" y="46" text-anchor="middle">318</text>
+          <text class="bp-txt bp-small" x="652" y="292" transform="rotate(45 652 292)" text-anchor="middle">Ø 450 AKSELAVSTAND</text>
+
+          <!-- Merkelapper -->
+          <g class="bp-thin">
+            <path d="M1127 123 1180 70H1320"/><circle cx="1127" cy="123" r="3" fill="#8fa9c9"/>
+            <path d="M848 450H1320"/><circle cx="848" cy="450" r="3" fill="#8fa9c9"/>
+            <path d="M728 400H280"/><circle cx="728" cy="400" r="3" fill="#8fa9c9"/>
+            <path d="M728 540H280"/><circle cx="728" cy="540" r="3" fill="#8fa9c9"/>
+            <path d="M393 857 360 836H280"/><circle cx="393" cy="857" r="3" fill="#8fa9c9"/>
+            <path d="M822 242 880 190H940"/><circle cx="822" cy="242" r="3" fill="#8fa9c9"/>
+          </g>
+          <g class="bp-txt">
+            <text x="1330" y="66">M1 · 2306 / 1750 KV</text>
+            <text x="1330" y="88" class="bp-small">BØRSTELØS · CW</text>
+            <text x="1330" y="446">FLYKONTROLLER</text>
+            <text x="1330" y="468" class="bp-small">PX4 · IMU ISOLERT</text>
+            <text x="270" y="396" text-anchor="end">STRØMFORDELING</text>
+            <text x="270" y="418" text-anchor="end" class="bp-small">PDB REV A · 120 A</text>
+            <text x="270" y="536" text-anchor="end">LIPO 6S · 4500 mAh</text>
+            <text x="270" y="558" text-anchor="end" class="bp-small">SKJULT UNDER PLATE</text>
+            <text x="270" y="832" text-anchor="end">PROPELL 10 × 4.5</text>
+            <text x="950" y="186">GPS / KOMPASS</text>
+          </g>
+
+          <!-- Tittelfelt -->
+          <g class="bp-title">
+            <rect class="bp-thin d" x="1250" y="742" width="306" height="114" pathLength="1"/>
+            <path class="bp-thin" d="M1250 790H1556M1250 823H1556M1352 790V856M1454 790V856"/>
+            <text class="bp-txt bp-strong" x="1266" y="772">AEROBOT TECHNOLOGIES</text>
+            <text class="bp-txt bp-small" x="1266" y="811">TEGN. NR</text>
+            <text class="bp-txt" x="1266" y="846">AT-001</text>
+            <text class="bp-txt bp-small" x="1368" y="811">REVISJON</text>
+            <text class="bp-txt" x="1368" y="846">A</text>
+            <text class="bp-txt bp-small" x="1470" y="811">MÅLESTOKK</text>
+            <text class="bp-txt" x="1470" y="846">1:2</text>
+          </g>
+          <text class="bp-txt bp-small" x="44" y="62">PROSJEKT 01 · RAMME · TOPPVISNING</text>
+          <text class="bp-txt bp-small" x="44" y="84">ALLE MÅL I MM</text>
+        </svg>
       </div>
       <div class="wrap">
         <div class="specs">

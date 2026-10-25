@@ -34,7 +34,7 @@ if ("IntersectionObserver" in window) {
 }
 
 // Dronebildet i toppen zoomer rolig ut mens man scroller
-const heroImg = document.querySelector(".hero__media img");
+const heroImg = document.querySelector(".hero__media > img, .hero__media > svg");
 const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 if (heroImg && !calm) {
   let ticking = false;
