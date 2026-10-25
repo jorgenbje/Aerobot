@@ -33,28 +33,6 @@ if ("IntersectionObserver" in window) {
   reveals.forEach((el) => el.classList.add("in"));
 }
 
-// Dronebildet i toppen zoomer rolig ut mens man scroller
-const heroImg = document.querySelector(".hero__media > img, .hero__media > svg");
-const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-if (heroImg && !calm) {
-  let ticking = false;
-  const update = () => {
-    const p = Math.min(window.scrollY / window.innerHeight, 1);
-    heroImg.style.transform = `scale(${1.08 - p * 0.08}) translateY(${p * 4}%)`;
-    ticking = false;
-  };
-  window.addEventListener(
-    "scroll",
-    () => {
-      if (!ticking) {
-        requestAnimationFrame(update);
-        ticking = true;
-      }
-    },
-    { passive: true }
-  );
-}
-
 // Piler for avdelingskarusellen
 const rail = document.querySelector(".rail");
 const prev = document.querySelector("[data-rail='prev']");

@@ -93,10 +93,8 @@ h1, h2, h3, h4, p { margin: 0; }
   top: 0;
   z-index: 50;
   height: var(--nav-h);
-  background: rgba(0, 0, 0, 0.92);
+  background: #000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
   color: var(--night-ink);
 }
 
@@ -389,9 +387,6 @@ h1, h2, h3, h4, p { margin: 0; }
   height: 100%;
   object-fit: cover;
   object-position: 50% 40%;
-  transform: scale(1.08);
-  transform-origin: 50% 30%;
-  will-change: transform;
 }
 .hero__media::before,
 .hero__media::after {
@@ -423,28 +418,6 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 .bp-small { font-size: 12px; fill: #6f87a6; }
 .bp-strong { font-weight: 700; fill: #dfe8f3; }
-
-.bp .d,
-.bp .d-all > * {
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: bp-draw 2.2s var(--ease) 0.2s forwards;
-}
-.bp .d-all > *:nth-child(2) { animation-delay: 0.35s; }
-.bp .d-all > *:nth-child(3) { animation-delay: 0.5s; }
-.bp .d-all > *:nth-child(4) { animation-delay: 0.65s; }
-.bp-txt, .bp-dash, .bp-center, .bp-prop, .bp-thin:not(.d) {
-  opacity: 0;
-  animation: bp-fade 1.2s ease 1.4s forwards;
-}
-.bp-prop {
-  animation: bp-fade 1.2s ease 1.4s forwards, bp-spin 7s linear 1.4s infinite;
-}
-.bp-prop.rev { animation-direction: normal, reverse; }
-
-@keyframes bp-draw { to { stroke-dashoffset: 0; } }
-@keyframes bp-fade { to { opacity: 1; } }
-@keyframes bp-spin { to { transform: rotate(360deg); } }
 
 /* Spesifikasjonslinje under hero */
 .specs {
@@ -933,8 +906,7 @@ h1, h2, h3, h4, p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
-  .hero__media > * { transform: none !important; }
-  .bp .d, .bp .d-all > *, .bp-txt, .bp-prop { animation: none !important; stroke-dashoffset: 0 !important; opacity: 1 !important; }
+
   .hero__kicker i { animation: none; }
   * { transition-duration: 0.01ms !important; }
 }
