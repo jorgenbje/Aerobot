@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aerobot Technologies – Studentdrevet droneteknologi ved UiA</title>
+  <meta name="description" content="Aerobot Technologies er studentorganisasjonen ved UiA Grimstad som designer og bygger droner fra bunnen av.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="https://aerobottechnologies.no/alene_svartbakgrunn.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+  <a class="skip" href="#innhold">Hopp til innhold</a>
+
+  <!-- ===================== NAVIGASJON ===================== -->
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="brand" href="index.html" aria-label="Aerobot Technologies – forsiden">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M13 27.5 19.6 4.5 27.5 27.5" fill="none" stroke="#e8edf3" stroke-width="3.2" stroke-linejoin="round"/>
+          <path d="M17 20h7.5" stroke="#e8edf3" stroke-width="2.6"/>
+          <path d="M4.5 15.5 14.6 12M3.2 20.8 13.1 17.3M2 26.1 11.6 22.6" stroke="#8ea6c4" stroke-width="2.3" stroke-linecap="round"/>
+        </svg>
+        Aerobot <span>Technologies</span>
+      </a>
+      <button class="nav__toggle" aria-label="Meny" aria-expanded="false" aria-controls="meny">
+        <span></span><span></span>
+      </button>
+      <ul class="nav__links" id="meny">
+        <li><a href="#prosjekt">Prosjektdronen</a></li>
+        <li><a href="#akkurat-na">Akkurat nå</a></li>
+        <li><a href="avdelinger.html">Avdelinger</a></li>
+        <li><a href="#samarbeid">Samarbeid</a></li>
+        <li><a class="nav__cta" href="#bli-med">Bli med</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="innhold">
+
+    <!-- ===================== HERO =====================
+         Bytt bildet i .hero__media når dere har egne bilder eller en
+         3D-render av dronen. Et liggende bilde på ca. 2400 px bredde
+         med mørk bakgrunn fungerer best. -->
+    <section class="hero dark">
+      <div class="wrap hero__text">
+        <p class="hero__kicker"><i></i>Prosjekt 01 · Under utvikling</p>
+        <h1>Fra bunnen <em>av.</em></h1>
+        <p class="lede">Vi har startet arbeidet med vår første egenutviklede drone. Ramme, elektronikk, firmware og flykontroll – designet og bygget av studenter ved UiA i Grimstad.</p>
+        <div class="actions">
+          <a class="btn" href="#prosjekt">Følg prosjektet</a>
+          <a class="btn btn--ghost" href="#bli-med">Bli med på laget</a>
+        </div>
+      </div>
+      <div class="hero__media">
+        <img src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?w=2400&q=80&auto=format&fit=crop"
+             alt="Drone i lufta mot en mørk bakgrunn" fetchpriority="high">
+      </div>
+      <div class="wrap">
+        <div class="specs">
+          <div><b>1</b><span>drone, fra scratch</span></div>
+          <div><b>6</b><span>avdelinger</span></div>
+          <div><b>2026</b><span>grunnlagt</span></div>
+          <div><b>100 %</b><span>studentdrevet</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== OM / PROSJEKTET ===================== -->
+    <section class="section" id="prosjekt">
+      <div class="wrap">
+        <div class="center reveal">
+          <span class="eyebrow">Prosjektdronen</span>
+          <h2 class="headline">Hver bolt. Hver linje&nbsp;kode.</h2>
+          <p class="lede" style="margin-top:22px">
+            Aerobot Technologies er en tverrfaglig studentorganisasjon ved Universitetet i Agder.
+            <strong>Ingeniører, utviklere, økonomer og markedsførere</strong> jobber side om side
+            for å bygge autonome droner – og målet er å konkurrere mot verdens beste studentlag
+            i konkurranser som SUAS og UAS Challenge.
+          </p>
+        </div>
+
+        <!-- Byggeloggen: flytt klassen "now" til fasen dere er i, og gi
+             ferdige faser klassen "done". -->
+        <ol class="track reveal" data-delay="1" aria-label="Fremdrift for prosjektdronen">
+          <li class="done">
+            <small>Mai 2026</small>
+            <h3>Konsept</h3>
+            <p>Krav, oppdrag og budsjett. Hva skal dronen klare?</p>
+          </li>
+          <li class="now">
+            <small>Nå</small>
+            <h3>Design</h3>
+            <p>CAD av rammen, valg av motorer, batteri og flykontroller.</p>
+          </li>
+          <li>
+            <small>Vår 2027</small>
+            <h3>Prototyp</h3>
+            <p>Første ramme printes og freses. Elektronikken loddes.</p>
+          </li>
+          <li>
+            <small>Sommer 2027</small>
+            <h3>Testflyging</h3>
+            <p>Hover-tester, tuning av PID og de første autonome rutene.</p>
+          </li>
+          <li>
+            <small>2028</small>
+            <h3>Konkurranse</h3>
+            <p>Vi stiller til start internasjonalt.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== AKKURAT NÅ =====================
+         Slik legger dere inn en ny sak:
+         1. Kopier en <article class="post"> … </article>-blokk.
+         2. Bytt bilde (src + alt), tag, dato, tittel og tekst.
+         Den store saken øverst (.feature) er den viktigste akkurat nå. -->
+    <section class="section section--tint" id="akkurat-na">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Akkurat nå</span>
+            <h2 class="title">Fra verkstedet.</h2>
+          </div>
+          <a class="more" href="https://www.instagram.com/aerobottechnologies/">Følg oss på Instagram</a>
+        </div>
+
+        <article class="feature reveal">
+          <div class="feature__img">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1600&q=80&auto=format&fit=crop"
+                 alt="Student tegner tekniske skisser ved et arbeidsbord" loading="lazy">
+          </div>
+          <div class="feature__body">
+            <div class="meta"><span class="tag">Mekatronikk</span><time datetime="2026-10-20">20. oktober 2026</time></div>
+            <h3>De første skissene av rammen er på plass</h3>
+            <p>Mekatronikk-teamet har landet på en kvadkopter i karbon med en akselavstand på 450 mm. Nå går skissene over i CAD, og de første delene skal 3D-printes før jul.</p>
+            <p>Neste steg er en felles designgjennomgang med elektronikk, slik at batteri, kabler og flykontroller får plass der de skal.</p>
+          </div>
+        </article>
+
+        <div class="posts">
+          <article class="post reveal" data-delay="1">
+            <div class="post__img">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=75&auto=format&fit=crop"
+                   alt="Kode på en laptopskjerm" loading="lazy">
+            </div>
+            <div class="post__body">
+              <div class="meta"><span class="tag">Software</span><time datetime="2026-10-14">14. okt</time></div>
+              <h3>PX4 eller ArduPilot?</h3>
+              <p>Software-teamet tester begge i simulator før vi bestemmer hvilken autopilot dronen skal fly på.</p>
+            </div>
+          </article>
+          <article class="post reveal" data-delay="2">
+            <div class="post__img">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=75&auto=format&fit=crop"
+                   alt="Nærbilde av et kretskort" loading="lazy">
+            </div>
+            <div class="post__body">
+              <div class="meta"><span class="tag">Elektronikk</span><time datetime="2026-10-08">8. okt</time></div>
+              <h3>Vårt første strømfordelingskort</h3>
+              <p>Første utkast av PDB-en er tegnet i KiCad og sendt til produksjon. Spenningen er stor – bokstavelig talt.</p>
+            </div>
+          </article>
+          <article class="post reveal" data-delay="3">
+            <div class="post__img">
+              <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=75&auto=format&fit=crop"
+                   alt="Publikum i et auditorium" loading="lazy">
+            </div>
+            <div class="post__body">
+              <div class="meta"><span class="tag">Event</span><time datetime="2026-09-30">30. sep</time></div>
+              <h3>Over 40 på oppstartsmøtet</h3>
+              <p>Takk til alle som kom! Ny runde med opptak åpner i januar.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== AVDELINGER ===================== -->
+    <section class="section" id="avdelinger" style="padding-bottom:clamp(56px,8vw,100px)">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Avdelinger</span>
+            <h2 class="title">Seks lag. Én drone.</h2>
+          </div>
+          <a class="more" href="avdelinger.html">Se alle avdelinger</a>
+        </div>
+      </div>
+
+      <div class="rail reveal" data-delay="1">
+        <a class="dept" href="avdelinger.html#software">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=75&auto=format&fit=crop" alt="" loading="lazy">
+          <div class="dept__top"><small>01</small><h3>Software</h3></div>
+          <p>Flykontroll, autonomi og bildegjenkjenning.</p>
+          <span class="dept__plus" aria-hidden="true">+</span>
+        </a>
+        <a class="dept" href="avdelinger.html#elektronikk">
+          <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=800&q=75&auto=format&fit=crop" alt="" loading="lazy">
+          <div class="dept__top"><small>02</small><h3>Elektronikk</h3></div>
+          <p>Kretskort, strøm, sensorer og kommunikasjon.</p>
+          <span class="dept__plus" aria-hidden="true">+</span>
+        </a>
+        <a class="dept" href="avdelinger.html#mekatronikk">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=75&auto=format&fit=crop" alt="" loading="lazy">
+          <div class="dept__top"><small>03</small><h3>Mekatronikk</h3></div>
+          <p>Ramme, CAD, materialer og motorer.</p>
+          <span class="dept__plus" aria-hidden="true">+</span>
+        </a>
+        <a class="dept" href="avdelinger.html#event">
+          <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=75&auto=format&fit=crop" alt="" loading="lazy">
+          <div class="dept__top"><small>04</small><h3>Event</h3></div>
+          <p>Stands, workshops og sosiale samlinger.</p>
+          <span class="dept__plus" aria-hidden="true">+</span>
+        </a>
+        <a class="dept" href="avdelinger.html#markedsforing">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=75&auto=format&fit=crop" alt="" loading="lazy">
+          <div class="dept__top"><small>05</small><h3>Markedsføring</h3></div>
+          <p>Merkevare, innhold og sosiale medier.</p>
+          <span class="dept__plus" aria-hidden="true">+</span>
+        </a>
+        <a class="dept" href="avdelinger.html#ledelse">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=75&auto=format&fit=crop" alt="" loading="lazy">
+          <div class="dept__top"><small>06</small><h3>Ledelse</h3></div>
+          <p>Retning, økonomi og partnerskap.</p>
+          <span class="dept__plus" aria-hidden="true">+</span>
+        </a>
+      </div>
+
+      <div class="wrap">
+        <div class="rail-nav">
+          <button data-rail="prev" aria-label="Forrige avdeling">
+            <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M9 2 4 7l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button data-rail="next" aria-label="Neste avdeling">
+            <svg viewBox="0 0 14 14" aria-hidden="true"><path d="m5 2 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BLI MED / SAMARBEID ===================== -->
+    <section class="section section--tint" id="bli-med" style="padding-top:20px">
+      <div class="wrap">
+        <div class="split reveal" style="padding:clamp(48px,7vw,96px) 0">
+          <div class="split__img">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1400&q=80&auto=format&fit=crop"
+                 alt="Studenter som jobber sammen ved en datamaskin" loading="lazy">
+          </div>
+          <div>
+            <span class="eyebrow">Bli med</span>
+            <h2 class="title">Du trenger ikke kunne fly. Bare ville lære.</h2>
+            <p class="lede">Vi ser etter studenter fra alle studieretninger – data, elektro, mekatronikk, fornybar energi, økonomi, multimedia og alt imellom. Nysgjerrighet er det eneste kravet.</p>
+            <div class="actions">
+              <a class="btn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=HoiChJk2P0uxNc9IALwe-2m2Tk3i73hPmXmUr6UmigVUNUdaSVhJSFRNNUNTU1pHMUNJMDY5Tjc5Si4u">Søk medlemskap</a>
+              <a class="more" href="avdelinger.html" style="align-self:center">Finn din avdeling</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tiles" id="samarbeid">
+          <div class="tile dark reveal">
+            <span class="eyebrow" style="margin:0">For bedrifter</span>
+            <h3>Bli sponsor.</h3>
+            <p>Gi neste generasjon ingeniører en flyvende start. Som partner får dere synlighet på dronen, nettsiden og i konkurranser – og en direkte linje til fremtidige talenter.</p>
+            <div class="actions"><a class="btn btn--light" href="mailto:contact@aerobottechnologies.no?subject=Sponsorat">Ta kontakt</a></div>
+          </div>
+          <div class="tile reveal" data-delay="1" style="background:var(--paper)">
+            <span class="eyebrow" style="margin:0">For forskning og skole</span>
+            <h3>Samarbeid med oss.</h3>
+            <p>Vi samarbeider gjerne med UiA, forskningsmiljøer og andre studentorganisasjoner om prosjekter, veiledning og testing.</p>
+            <div class="actions"><a class="more" href="mailto:contact@aerobottechnologies.no">contact@aerobottechnologies.no</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__cols">
+        <div class="footer__about">
+          <h4>Aerobot Technologies</h4>
+          <p>Studentorganisasjon for dronebygging og autonom luftfartsteknologi ved Universitetet i Agder, campus Grimstad.</p>
+        </div>
+        <div>
+          <h4>Utforsk</h4>
+          <ul>
+            <li><a href="index.html#prosjekt">Prosjektdronen</a></li>
+            <li><a href="index.html#akkurat-na">Akkurat nå</a></li>
+            <li><a href="avdelinger.html">Avdelinger</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Engasjer deg</h4>
+          <ul>
+            <li><a href="index.html#bli-med">Bli medlem</a></li>
+            <li><a href="index.html#samarbeid">Bli sponsor</a></li>
+            <li><a href="mailto:contact@aerobottechnologies.no">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Følg oss</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/aerobottechnologies/">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/118824362">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year">2026</span> Aerobot Technologies · UiA Grimstad</span>
+        <a href="mailto:contact@aerobottechnologies.no">contact@aerobottechnologies.no</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

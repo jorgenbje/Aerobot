@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "website",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:\\Users\\jorkb\\AppData\\Local\\Temp\\claude\\C--Users-jorkb-OneDrive---Universitetet-i-Agder-Aerobot-Technologies-website\\7e7e19ff-bb06-45f4-8930-e09dbc86b0d1\\scratchpad\\serve.ps1", "-Root", "C:\\Users\\jorkb\\OneDrive - Universitetet i Agder\\Aerobot Technologies\\website", "-Port", "5500"],
+      "port": 5500
+    }
+  ]
+}
