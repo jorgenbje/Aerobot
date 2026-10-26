@@ -28,7 +28,6 @@ defaults:
       layout: post
       # Poster får adresser som /poster/tittel-pa-posten/
       permalink: /poster/:title/
-
 exclude:
   - HVORDAN-POSTE.md
   - README.md
