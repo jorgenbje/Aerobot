@@ -39,5 +39,5 @@ Du kan skrive **fet tekst**, *kursiv* og [lenker](https://aerobottechnologies.no
 
 > Et sitat som skal skille seg ut.
 
-![Beskrivelse av bildet](/bilder/poster/filnavn.jpg)
+![Beskrivelse av bildet]({{ site.baseurl }}/bilder/poster/filnavn.jpg)
 *Bildetekst under bildet.*

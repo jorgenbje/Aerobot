@@ -13,4 +13,4 @@ Ledelsen presenterte planene for Prosjekt 01, og hver avdeling fortalte hva de s
 
 ## Gikk du glipp av det?
 
-Ingen fare. Ny runde med opptak åpner i januar, og du kan allerede nå [sende inn en søknad](/#bli-med). Vi gleder oss til å bli kjent med deg.
+Ingen fare. Ny runde med opptak åpner i januar, og du kan allerede nå [sende inn en søknad]({{ '/#bli-med' | relative_url }}). Vi gleder oss til å bli kjent med deg.

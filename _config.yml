@@ -34,3 +34,7 @@ exclude:
   - README.md
   - _maler
   - .claude
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - _config.pages.yml

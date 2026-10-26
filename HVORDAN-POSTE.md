@@ -68,7 +68,7 @@ Vanlig avsnitt. Et tomt linjeskift gir nytt avsnitt.
 
 > Et sitat som skal skille seg ut.
 
-![Beskrivelse av bildet](/bilder/poster/filnavn.jpg)
+![Beskrivelse av bildet]({{ site.baseurl }}/bilder/poster/filnavn.jpg)
 *Bildetekst rett under bildet.*
 ```
 
