@@ -1,0 +1,2 @@
+{%- comment -%} Gir riktig adresse både for opplastede bilder (/bilder/...) og bilder fra nettet (https://...). {%- endcomment -%}
+{%- if include.src contains '://' -%}{{ include.src }}{%- else -%}{{ include.src | relative_url }}{%- endif -%}

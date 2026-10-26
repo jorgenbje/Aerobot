@@ -756,15 +756,21 @@ h1, h2, h3, h4, p { margin: 0; }
   gap: 8px;
   margin-top: 36px;
 }
-.chips a {
+.chips a,
+.chips button {
   padding: 8px 16px;
   border-radius: 980px;
   border: 1px solid var(--line-dark);
+  background: none;
   color: var(--night-ink) !important;
+  font: inherit;
   font-size: 14px;
-  transition: background 0.2s, border-color 0.2s;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
-.chips a:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.3); text-decoration: none; }
+.chips a:hover,
+.chips button:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.3); text-decoration: none; }
+.chips button[aria-pressed="true"] { background: var(--night-ink); border-color: var(--night-ink); color: var(--ink) !important; }
 
 .unit {
   display: grid;
@@ -848,6 +854,111 @@ h1, h2, h3, h4, p { margin: 0; }
 @media (max-width: 700px) {
   .people { grid-template-columns: 1fr 1fr; }
 }
+
+/* --------------------------------------------------------------------------
+   Poster (Akkurat nå)
+   -------------------------------------------------------------------------- */
+
+.feature__body .more { margin-top: 4px; color: var(--link); }
+.post[hidden] { display: none; }
+.empty { color: var(--ink-2); text-align: center; padding: 40px 0; }
+
+.narrow { max-width: calc(760px + var(--gutter) * 2); }
+
+.article-head { padding: clamp(40px, 6vw, 80px) 0 clamp(28px, 4vw, 44px); }
+.article-head .meta { margin: 22px 0 14px; flex-wrap: wrap; }
+.article-head a.tag:hover { text-decoration: none; background: rgba(75, 101, 132, 0.2); }
+.article-head h1 {
+  font-size: clamp(34px, 5.4vw, 58px);
+  line-height: 1.06;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+.article-head .lede { margin-top: 18px; }
+
+.back { font-size: 15px; }
+.back::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 8px;
+  border-bottom: 1.5px solid currentColor;
+  border-left: 1.5px solid currentColor;
+  transform: translateY(-1px) rotate(45deg);
+}
+
+.article-cover { margin: 0 auto; }
+.article-cover__img {
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: var(--paper-2);
+}
+.article-cover__img img { width: 100%; height: 100%; object-fit: cover; }
+.article-cover figcaption,
+.prose img + em {
+  display: block;
+  font-size: 14px;
+  font-style: normal;
+  color: var(--ink-2);
+  margin-top: 12px;
+}
+
+.prose {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: clamp(40px, 6vw, 64px) 0 clamp(24px, 4vw, 40px);
+  font-size: 19px;
+  line-height: 1.62;
+  letter-spacing: -0.014em;
+}
+.prose > * + * { margin-top: 1.1em; }
+.prose h2 {
+  font-size: clamp(26px, 3vw, 32px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.028em;
+  margin-top: 1.8em;
+}
+.prose h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; margin-top: 1.6em; }
+.prose h2 + *, .prose h3 + * { margin-top: 0.6em; }
+.prose a { text-decoration: underline; text-underline-offset: 3px; }
+.prose ul, .prose ol { padding-left: 1.3em; }
+.prose li + li { margin-top: 0.4em; }
+.prose blockquote {
+  margin: 1.6em 0;
+  padding-left: 22px;
+  border-left: 3px solid var(--brand);
+  font-size: clamp(21px, 2.4vw, 26px);
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.prose blockquote p { margin: 0; }
+.prose img { border-radius: 16px; margin: 0.6em 0 0; width: 100%; }
+.prose code {
+  font-size: 0.88em;
+  background: var(--paper-2);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+.prose pre { background: var(--paper-2); padding: 18px; border-radius: 14px; overflow-x: auto; font-size: 15px; }
+.prose pre code { background: none; padding: 0; }
+.prose hr { border: 0; border-top: 1px solid var(--line); margin: 2.4em 0; }
+
+.article-foot {
+  margin: 0 auto;
+  padding: 24px 0 clamp(64px, 9vw, 112px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 680px;
+  border-top: 1px solid var(--line);
+  font-size: 15px;
+}
+.article-foot span { color: var(--ink-2); }
 
 /* --------------------------------------------------------------------------
    Footer

@@ -33,6 +33,35 @@ if ("IntersectionObserver" in window) {
   reveals.forEach((el) => el.classList.add("in"));
 }
 
+// Filtrering av poster etter avdeling (/poster/?avdeling=software)
+const filter = document.querySelector("[data-filter]");
+const liste = document.querySelector("[data-postliste]");
+if (filter && liste) {
+  const tom = document.querySelector("[data-tom]");
+  const velg = (avdeling) => {
+    let antall = 0;
+    filter.querySelectorAll("button").forEach((b) =>
+      b.setAttribute("aria-pressed", b.dataset.avdeling === avdeling)
+    );
+    liste.querySelectorAll(".post").forEach((p) => {
+      const vis = !avdeling || p.dataset.avdeling === avdeling;
+      p.hidden = !vis;
+      if (vis) antall++;
+    });
+    if (tom) tom.hidden = antall > 0;
+  };
+  filter.addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (!b) return;
+    velg(b.dataset.avdeling);
+    const url = new URL(location);
+    if (b.dataset.avdeling) url.searchParams.set("avdeling", b.dataset.avdeling);
+    else url.searchParams.delete("avdeling");
+    history.replaceState(null, "", url);
+  });
+  velg(new URLSearchParams(location.search).get("avdeling") || "");
+}
+
 // Piler for avdelingskarusellen
 const rail = document.querySelector(".rail");
 const prev = document.querySelector("[data-rail='prev']");

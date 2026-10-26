@@ -1,0 +1,38 @@
+---
+layout: default
+title: Akkurat nå
+description: Nyheter og oppdateringer fra verkstedet til Aerobot Technologies.
+---
+{%- comment -%} Oversikt over alle poster. Listen fylles automatisk fra _posts/. {%- endcomment -%}
+{%- assign avdelinger = site.posts | map: "avdeling" | compact | uniq | sort %}
+
+<section class="page-hero dark">
+  <div class="wrap">
+    <span class="eyebrow">Akkurat nå</span>
+    <h1 class="headline">Fra verkstedet.</h1>
+    <p class="lede">Oppdateringer fra arbeidet med prosjektdronen og livet i Aerobot – skrevet av de som bygger den.</p>
+    {%- if avdelinger.size > 1 %}
+    <nav class="chips" aria-label="Filtrer etter avdeling" data-filter>
+      <button type="button" data-avdeling="" aria-pressed="true">Alle</button>
+      {%- for a in avdelinger %}
+      <button type="button" data-avdeling="{{ a | slugify }}" aria-pressed="false">{{ a }}</button>
+      {%- endfor %}
+    </nav>
+    {%- endif %}
+  </div>
+</section>
+
+<section class="section section--tint" style="padding-top:clamp(40px,6vw,72px)">
+  <div class="wrap">
+    {%- if site.posts.size > 0 %}
+    <div class="posts" style="margin-top:0" data-postliste>
+      {%- for p in site.posts %}
+      {% include post-kort.html post=p %}
+      {%- endfor %}
+    </div>
+    <p class="empty" hidden data-tom>Ingen saker fra denne avdelingen ennå.</p>
+    {%- else %}
+    <p class="empty">Ingen saker ennå – følg med!</p>
+    {%- endif %}
+  </div>
+</section>

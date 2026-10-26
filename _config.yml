@@ -1,0 +1,36 @@
+# Innstillinger for nettsiden. GitHub Pages leser denne filen automatisk.
+# Endringer her krever ny opplasting før de vises.
+
+title: Aerobot Technologies
+tagline: Studentdrevet droneteknologi ved UiA
+description: Aerobot Technologies er studentorganisasjonen ved UiA Grimstad som designer og bygger droner fra bunnen av.
+url: "https://aerobottechnologies.no"
+baseurl: ""
+lang: nb
+timezone: Europe/Oslo
+
+email: contact@aerobottechnologies.no
+soknadsskjema: "https://forms.office.com/Pages/ResponsePage.aspx?id=HoiChJk2P0uxNc9IALwe-2m2Tk3i73hPmXmUr6UmigVUNUdaSVhJSFRNNUNTU1pHMUNJMDY5Tjc5Si4u"
+instagram: "https://www.instagram.com/aerobottechnologies/"
+linkedin: "https://www.linkedin.com/company/118824362"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Standardverdier, så hver post slipper å skrive layout selv
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      # Poster får adresser som /poster/tittel-pa-posten/
+      permalink: /poster/:title/
+
+exclude:
+  - HVORDAN-POSTE.md
+  - README.md
+  - _maler
+  - .claude

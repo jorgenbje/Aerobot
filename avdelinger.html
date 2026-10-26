@@ -1,45 +1,8 @@
-<!doctype html>
-<html lang="nb">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Avdelinger – Aerobot Technologies</title>
-  <meta name="description" content="Software, elektronikk, mekatronikk, event, markedsføring og ledelse – bli kjent med avdelingene i Aerobot Technologies.">
-  <meta name="theme-color" content="#000000">
-  <link rel="icon" href="https://aerobottechnologies.no/alene_svartbakgrunn.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script>document.documentElement.classList.add("js")</script>
-</head>
-<body>
-  <a class="skip" href="#innhold">Hopp til innhold</a>
-
-  <header class="nav">
-    <div class="wrap nav__inner">
-      <a class="brand" href="index.html" aria-label="Aerobot Technologies – forsiden">
-        <svg viewBox="0 0 32 32" aria-hidden="true">
-          <path d="M13 27.5 19.6 4.5 27.5 27.5" fill="none" stroke="#e8edf3" stroke-width="3.2" stroke-linejoin="round"/>
-          <path d="M17 20h7.5" stroke="#e8edf3" stroke-width="2.6"/>
-          <path d="M4.5 15.5 14.6 12M3.2 20.8 13.1 17.3M2 26.1 11.6 22.6" stroke="#8ea6c4" stroke-width="2.3" stroke-linecap="round"/>
-        </svg>
-        Aerobot <span>Technologies</span>
-      </a>
-      <button class="nav__toggle" aria-label="Meny" aria-expanded="false" aria-controls="meny">
-        <span></span><span></span>
-      </button>
-      <ul class="nav__links" id="meny">
-        <li><a href="index.html#prosjekt">Prosjektdronen</a></li>
-        <li><a href="index.html#akkurat-na">Akkurat nå</a></li>
-        <li><a href="avdelinger.html" aria-current="page">Avdelinger</a></li>
-        <li><a href="index.html#samarbeid">Samarbeid</a></li>
-        <li><a class="nav__cta" href="index.html#bli-med">Bli med</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <main id="innhold">
+---
+layout: default
+title: Avdelinger
+description: "Software, elektronikk, mekatronikk, event, markedsføring og ledelse – bli kjent med avdelingene i Aerobot Technologies."
+---
     <section class="page-hero dark">
       <div class="wrap">
         <span class="eyebrow">Avdelinger</span>
@@ -186,51 +149,8 @@
         <h2 class="headline">Fant du din plass?</h2>
         <p class="lede" style="margin:18px auto 30px">Søknaden tar to minutter. Du velger avdeling når du søker, og kan alltid bytte senere.</p>
         <div class="actions">
-          <a class="btn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=HoiChJk2P0uxNc9IALwe-2m2Tk3i73hPmXmUr6UmigVUNUdaSVhJSFRNNUNTU1pHMUNJMDY5Tjc5Si4u">Søk medlemskap</a>
+          <a class="btn" href="{{ site.soknadsskjema }}">Søk medlemskap</a>
           <a class="btn btn--ghost" href="mailto:contact@aerobottechnologies.no">Still et spørsmål</a>
         </div>
       </div>
     </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer__cols">
-        <div class="footer__about">
-          <h4>Aerobot Technologies</h4>
-          <p>Studentorganisasjon for dronebygging og autonom luftfartsteknologi ved Universitetet i Agder, campus Grimstad.</p>
-        </div>
-        <div>
-          <h4>Utforsk</h4>
-          <ul>
-            <li><a href="index.html#prosjekt">Prosjektdronen</a></li>
-            <li><a href="index.html#akkurat-na">Akkurat nå</a></li>
-            <li><a href="avdelinger.html">Avdelinger</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Engasjer deg</h4>
-          <ul>
-            <li><a href="index.html#bli-med">Bli medlem</a></li>
-            <li><a href="index.html#samarbeid">Bli sponsor</a></li>
-            <li><a href="mailto:contact@aerobottechnologies.no">Kontakt</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Følg oss</h4>
-          <ul>
-            <li><a href="https://www.instagram.com/aerobottechnologies/">Instagram</a></li>
-            <li><a href="https://www.linkedin.com/company/118824362">LinkedIn</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <span>© <span id="year">2026</span> Aerobot Technologies · UiA Grimstad</span>
-        <a href="mailto:contact@aerobottechnologies.no">contact@aerobottechnologies.no</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-</body>
-</html>

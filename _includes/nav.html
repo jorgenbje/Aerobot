@@ -1,0 +1,24 @@
+<a class="skip" href="#innhold">Hopp til innhold</a>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Aerobot Technologies – forsiden">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M13 27.5 19.6 4.5 27.5 27.5" fill="none" stroke="#e8edf3" stroke-width="3.2" stroke-linejoin="round"/>
+        <path d="M17 20h7.5" stroke="#e8edf3" stroke-width="2.6"/>
+        <path d="M4.5 15.5 14.6 12M3.2 20.8 13.1 17.3M2 26.1 11.6 22.6" stroke="#8ea6c4" stroke-width="2.3" stroke-linecap="round"/>
+      </svg>
+      Aerobot <span>Technologies</span>
+    </a>
+    <button class="nav__toggle" aria-label="Meny" aria-expanded="false" aria-controls="meny">
+      <span></span><span></span>
+    </button>
+    <ul class="nav__links" id="meny">
+      <li><a href="{{ '/#prosjekt' | relative_url }}">Prosjektdronen</a></li>
+      <li><a href="{{ '/poster/' | relative_url }}"{% if page.url contains '/poster/' %} aria-current="page"{% endif %}>Akkurat nå</a></li>
+      <li><a href="{{ '/avdelinger.html' | relative_url }}"{% if page.url == '/avdelinger.html' %} aria-current="page"{% endif %}>Avdelinger</a></li>
+      <li><a href="{{ '/#samarbeid' | relative_url }}">Samarbeid</a></li>
+      <li><a class="nav__cta" href="{{ '/#bli-med' | relative_url }}">Bli med</a></li>
+    </ul>
+  </div>
+</header>
