@@ -1,0 +1,13 @@
+{%- assign p = include.post -%}
+<a class="post reveal" href="{{ p.url | relative_url }}" data-avdeling="{{ p.avdeling | slugify }}"{% if include.delay %} data-delay="{{ include.delay }}"{% endif %}>
+  {%- if p.bilde %}
+  <div class="post__img">
+    <img src="{% include bilde-url.html src=p.bilde %}" alt="{{ p.bildetekst | escape }}" loading="lazy">
+  </div>
+  {%- endif %}
+  <div class="post__body">
+    <div class="meta">{% if p.avdeling %}<span class="tag">{{ p.avdeling }}</span>{% endif %}<time datetime="{{ p.date | date: '%Y-%m-%d' }}">{% include dato.html dato=p.date %}</time></div>
+    <h3>{{ p.title }}</h3>
+    {% if p.ingress %}<p>{{ p.ingress }}</p>{% endif %}
+  </div>
+</a>

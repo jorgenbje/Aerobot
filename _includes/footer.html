@@ -1,0 +1,37 @@
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__cols">
+      <div class="footer__about">
+        <h4>Aerobot Technologies</h4>
+        <p>Studentorganisasjon for dronebygging og autonom luftfartsteknologi ved Universitetet i Agder, campus Grimstad.</p>
+      </div>
+      <div>
+        <h4>Utforsk</h4>
+        <ul>
+          <li><a href="{{ '/#prosjekt' | relative_url }}">Prosjektdronen</a></li>
+          <li><a href="{{ '/poster/' | relative_url }}">Akkurat nå</a></li>
+          <li><a href="{{ '/avdelinger.html' | relative_url }}">Avdelinger</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Engasjer deg</h4>
+        <ul>
+          <li><a href="{{ '/#bli-med' | relative_url }}">Bli medlem</a></li>
+          <li><a href="{{ '/#samarbeid' | relative_url }}">Bli sponsor</a></li>
+          <li><a href="mailto:{{ site.email }}">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Følg oss</h4>
+        <ul>
+          <li><a href="{{ site.instagram }}">Instagram</a></li>
+          <li><a href="{{ site.linkedin }}">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© {{ site.time | date: '%Y' }} Aerobot Technologies · UiA Grimstad</span>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </div>
+  </div>
+</footer>

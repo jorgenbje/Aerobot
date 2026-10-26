@@ -1,0 +1,65 @@
+---
+layout: default
+---
+{%- comment -%}
+  Den faste malen for alle poster. Innholdet hentes fra feltene øverst
+  i hver fil i _posts/ (title, ingress, avdeling, bilde, bildetekst,
+  forfatter) og selve teksten under.
+{%- endcomment -%}
+{%- assign ord = content | strip_html | number_of_words -%}
+{%- assign minutter = ord | divided_by: 200 | plus: 1 -%}
+
+<article class="article">
+  <header class="article-head">
+    <div class="wrap narrow">
+      <a class="back" href="{{ '/poster/' | relative_url }}">Alle saker</a>
+      <div class="meta">
+        {%- if page.avdeling %}<a class="tag" href="{{ '/poster/' | relative_url }}?avdeling={{ page.avdeling | slugify }}">{{ page.avdeling }}</a>{% endif -%}
+        <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{% include dato.html dato=page.date %}</time>
+        <span aria-hidden="true">·</span>
+        <span>{{ minutter }} min lesing</span>
+      </div>
+      <h1>{{ page.title }}</h1>
+      {% if page.ingress %}<p class="lede">{{ page.ingress }}</p>{% endif %}
+    </div>
+  </header>
+
+  {%- if page.bilde %}
+  <figure class="wrap article-cover">
+    <div class="article-cover__img">
+      <img src="{% include bilde-url.html src=page.bilde %}" alt="{{ page.bildetekst | escape }}" fetchpriority="high">
+    </div>
+    {% if page.bildetekst %}<figcaption>{{ page.bildetekst }}</figcaption>{% endif %}
+  </figure>
+  {%- endif %}
+
+  <div class="wrap">
+    <div class="prose">
+{{ content }}
+    </div>
+
+    <footer class="article-foot narrow">
+      {%- if page.forfatter %}
+      <p><span>Skrevet av</span> {{ page.forfatter }}</p>
+      {%- endif %}
+      <a class="more" href="{{ '/poster/' | relative_url }}">Flere saker fra verkstedet</a>
+    </footer>
+  </div>
+</article>
+
+{%- assign andre = site.posts | where_exp: "p", "p.url != page.url" %}
+{%- if andre.size > 0 %}
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="title">Les også.</h2>
+      <a class="more" href="{{ '/poster/' | relative_url }}">Alle saker</a>
+    </div>
+    <div class="posts" style="margin-top:0">
+      {%- for p in andre limit: 3 %}
+      {% include post-kort.html post=p delay=forloop.index %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
