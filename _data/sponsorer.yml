@@ -1,0 +1,14 @@
+# Sponsorer og partnere som vises på forsiden under «Med støtte fra».
+# Slik legger du til en ny:
+#   1. Last opp logoen til bilder/sponsorer/ (helst SVG eller PNG med gjennomsiktig bakgrunn).
+#   2. Kopier en blokk under og fyll ut feltene. Rekkefølgen her er rekkefølgen på siden.
+#
+#   navn: Navnet på bedriften (vises for skjermlesere og når man holder musen over)
+#   logo: Stien til logoen
+#   url:  Nettsiden logoen skal lenke til
+#   type: Kort beskrivelse som vises under logoen, f.eks. «Hovedsponsor» eller «Partner»
+
+- navn: Universitetet i Agder
+  logo: /bilder/sponsorer/uia.svg
+  url: https://www.uia.no
+  type: Vertsuniversitet

@@ -82,6 +82,7 @@ vanskelig å hacke.
 | Endre e-post, søknadsskjema, Instagram/LinkedIn | `_config.yml`                                           |
 | Endre farger, skrift eller avstander            | `css/style.css` (variablene øverst i filen)             |
 | Laste opp bilder til saker                      | Mappen `bilder/poster/`                                 |
+| Legge til eller fjerne en sponsor               | `_data/sponsorer.yml` + logo i `bilder/sponsorer/`      |
 
 Alt kan gjøres direkte på github.com: åpne filen, trykk på blyanten, gjør
 endringen og trykk **Commit changes**.
@@ -104,6 +105,8 @@ Selve forsiden. Inneholder, ovenfra og ned:
   du ikke skrive saker manuelt.
 - **Avdelinger:** kortene man kan sveipe gjennom, som lenker til avdelingssiden.
 - **Bli med** og **Samarbeid/sponsor**.
+- **Med støtte fra:** sponsorlogoene. Fylles **automatisk** fra
+  `_data/sponsorer.yml`, med en «Din logo her?»-boks til slutt.
 
 Øverst i filen står `layout: default` mellom to `---`-linjer. Det forteller
 Jekyll at siden skal bruke felles meny og bunntekst. Ikke fjern disse linjene.
@@ -138,6 +141,25 @@ Mappen blir ikke publisert på nettsiden.
 Last opp bilder hit og skriv stien i `bilde`-feltet, f.eks.
 `/bilder/poster/testflyging.jpg`. Filen `.gitkeep` sørger bare for at den tomme
 mappen finnes på GitHub, og kan ignoreres.
+
+#### `_data/sponsorer.yml` – listen over sponsorer
+Én blokk per sponsor med `navn`, `logo`, `url` og `type` (f.eks.
+«Hovedsponsor»). Rekkefølgen i filen er rekkefølgen på nettsiden. Slik legger
+du til en ny:
+
+```yaml
+- navn: Bedriftsnavn AS
+  logo: /bilder/sponsorer/bedriftsnavn.svg
+  url: https://bedriftsnavn.no
+  type: Partner
+```
+
+Hold innrykket (to mellomrom) likt som i blokkene over.
+
+#### `bilder/sponsorer/` – sponsorlogoer
+Logoene som vises under «Med støtte fra». SVG eller PNG med gjennomsiktig
+bakgrunn fungerer best. Logoen skaleres automatisk til samme høyde som de
+andre. `uia.svg` er UiAs offisielle logo, hentet fra uia.no.
 
 #### `HVORDAN-POSTE.md` – bruksanvisning for poster
 Steg-for-steg-guide for å lage, endre og slette saker, laste opp bilder,

@@ -307,7 +307,7 @@ layout: default
             <p class="lede">Vi ser etter studenter fra alle studieretninger – data, elektro, mekatronikk, fornybar energi, økonomi, multimedia og alt imellom. Nysgjerrighet er det eneste kravet.</p>
             <div class="actions">
               <a class="btn" href="{{ site.soknadsskjema }}">Søk medlemskap</a>
-              <a class="more" href="{{ '/avdelinger.html' | relative_url }}" style="align-self:center">Finn din avdeling</a>
+              <a class="more" href="{{ '/avdelinger.html' | relative_url }}" style="align-self:center">Les om våre avdelinger</a>
             </div>
           </div>
         </div>
@@ -316,7 +316,7 @@ layout: default
           <div class="tile dark reveal">
             <span class="eyebrow" style="margin:0">For bedrifter</span>
             <h3>Bli sponsor.</h3>
-            <p>Gi neste generasjon ingeniører en flyvende start. Som partner får dere synlighet på dronen, nettsiden og i konkurranser – og en direkte linje til fremtidige talenter.</p>
+            <p>Støtt fremtidige Ingeniører, og få deres reklame på drone, merch og nettside</p>
             <div class="actions"><a class="btn btn--light" href="mailto:contact@aerobottechnologies.no?subject=Sponsorat">Ta kontakt</a></div>
           </div>
           <div class="tile reveal" data-delay="1" style="background:var(--paper)">
@@ -328,3 +328,34 @@ layout: default
         </div>
       </div>
     </section>
+
+    <!-- ===================== SPONSORER =====================
+         Logoene hentes fra _data/sponsorer.yml. Legg til nye sponsorer der. -->
+    {%- if site.data.sponsorer.size > 0 %}
+    <section class="section" id="sponsorer">
+      <div class="wrap">
+        <div class="center reveal">
+          <span class="eyebrow">Sponsorer og partnere</span>
+          <h2 class="title">Med støtte fra.</h2>
+          <p class="lede" style="margin-top:16px">Takk til alle som hjelper oss med å få Prosjekt 01 i lufta.</p>
+        </div>
+
+        <ul class="sponsors reveal" data-delay="1">
+          {%- for s in site.data.sponsorer %}
+          <li>
+            <a class="sponsor" href="{{ s.url }}" title="{{ s.navn }}">
+              <img src="{% include bilde-url.html src=s.logo %}" alt="{{ s.navn }}" loading="lazy">
+            </a>
+            {% if s.type %}<span>{{ s.type }}</span>{% endif %}
+          </li>
+          {%- endfor %}
+          <li>
+            <a class="sponsor sponsor--ledig" href="mailto:{{ site.email }}?subject=Sponsorat">
+              <b>Din logo her?</b>
+              <span class="more">Bli sponsor</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    {%- endif %}
